@@ -1,3 +1,5 @@
+I refered this github page : https://github.com/nrsyed/sorts
+
 This is sorting algorithm virtualization project. For now we can use this project to virtualize merge, quick and bubble sort.
 
 Instruction
