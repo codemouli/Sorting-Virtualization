@@ -51,7 +51,7 @@ def merge(data, left, right, mid):
     l, r = 0, 0
     k = left
 
-    while(l<len(left_data) and r<len(right_data)):
+    while l<len(left_data) and r<len(right_data):
         yield data
         if left_data[l] <= right_data[r]:
             data[k] = left_data[l]
@@ -60,12 +60,12 @@ def merge(data, left, right, mid):
             data[k] = right_data[r]
             r+=1
         k+=1
-    while(l<len(left_data)):
+    while l<len(left_data):
         yield data
         data[k] = left_data[l]
         l+=1
         k+=1
-    while(r<len(right_data)):
+    while r<len(right_data):
         yield data
         data[k] = right_data[r]
         r+=1
@@ -78,7 +78,7 @@ if not isinstance(input_length, int):
 
 
 # Creating random data for sort operation
-input_data = np.random.randint(1, 50, input_length)
+input_data = np.random.permutation(np.random.randint(1, 50, input_length))
 
 # creating a copy data for each sorting algorithm
 bubble_data = input_data.copy()
